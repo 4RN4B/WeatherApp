@@ -4,7 +4,7 @@ const express = require("express");
 const cities = require("./city.list.json");
 const DARKSKY_API = process.env.DARKSKY_API;
 const app = express();
-const port = processenv.PORT || 5000;
+const port = process.env.PORT || 5000;
 const fetch = require("node-fetch");
 const days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
