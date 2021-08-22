@@ -1,0 +1,228 @@
+* {
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: #b9def6;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath fill='%2316394c' fill-opacity='0.24' d='M14 16H9v-2h5V9.87a4 4 0 1 1 2 0V14h5v2h-5v15.95A10 10 0 0 0 23.66 27l-3.46-2 8.2-2.2-2.9 5a12 12 0 0 1-21 0l-2.89-5 8.2 2.2-3.47 2A10 10 0 0 0 14 31.95V16zm40 40h-5v-2h5v-4.13a4 4 0 1 1 2 0V54h5v2h-5v15.95A10 10 0 0 0 63.66 67l-3.47-2 8.2-2.2-2.88 5a12 12 0 0 1-21.02 0l-2.88-5 8.2 2.2-3.47 2A10 10 0 0 0 54 71.95V56zm-39 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm40-40a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM15 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm40 40a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'%3E%3C/path%3E%3C/svg%3E");
+}
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+.form-control {
+    font-size: 15px;
+    border: 2px solid #16394c;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.8rem 1rem;
+}
+.form-control:focus {
+    outline: none;
+}
+.input-group {
+    position: relative;
+    margin: 0rem 1rem;
+}
+
+.autocomplete-wrapper {
+    margin-top: 1rem;
+    width: 100%;
+    background-color: #ddd;
+    position: absolute;
+    left: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+.autocomplete-wrapper.active {
+    display: block;
+}
+
+.autocomplete-wrapper p {
+    padding: 8px 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+.autocomplete-wrapper p:hover {
+    background-color: #608094;
+}
+
+.weather-wrapper {
+    margin: 1rem;
+    color: white;
+    border: 4px solid #608094;
+    background: #16394c;
+    border-radius: 10px;
+    padding: 1.5rem 1.25rem;
+}
+#timezone {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #fff;
+}
+.current-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0rem;
+}
+.current-state > * {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.current-temp {
+    font-size: 2.5rem;
+}
+
+.weather-forecast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+weather-forecast > * {
+    flex: 1;
+}
+.individual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.individual .day {
+    text-transform: uppercase;
+}
+.for-icon {
+    margin: 0.5rem 0rem;
+}
+
+/* #searchbar {
+    height: 60px;
+    width: 40%;
+}
+
+#button-addon2 {
+    background-color: bisque;
+}
+
+#button-addon2:hover {
+    color: black;
+}
+
+#display {
+    height: 50%;
+    width: 40%;
+    background: rgba(41, 140, 221, 0.801) !important;
+    border: 5px solid rgba(30, 30, 192, 0.836);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10%;
+}
+
+#iconHolder {
+    border: 2px solid black;
+    height: 130px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#iconHolder #icon {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#iconHolder #icon img {
+    max-width: 100%;
+    min-height: 80%;
+}
+
+#iconHolder #icon p {
+    font-family: "PT Serif", serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: antiquewhite;
+}
+#iconHolder #icon #weatherType {
+    font-family: "PT Serif", serif;
+    font-size: 1.5rem;
+    color: antiquewhite;
+}
+
+#iconHolder #degree {
+    font-family: "PT Serif", serif;
+    font-size: 2.5rem;
+    color: antiquewhite;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#iconHolder #temp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#iconHolder #degree #degreeHolder {
+    font-size: 1rem;
+    font-weight: 900;
+    height: 45px;
+}
+
+#iconHolder #degree #unit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#iconHolder #otherInfo {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#iconHolder #otherInfo p {
+    height: 50%;
+    font-size: 1.2em;
+    font-family: "PT Serif", serif;
+    font-weight: 600;
+    color: antiquewhite;
+}
+
+#temperature {
+    border: 2px solid black;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#day1,
+#day2,
+#day3,
+#day4,
+#day5 {
+    border: 2px solid red;
+    height: 100%;
+    width: 30%;
+} */
